@@ -50,7 +50,12 @@
     return self;
 }
 
-
+- (instancetype)initWithValue:(NSString *)value {
+    if (self = [super init]) {
+        self.value = value;
+    }
+    return self;
+}
 
 #pragma mark - IBOutlets
 
@@ -65,7 +70,16 @@
 
 
 #pragma mark - Public API
-
+- (void)insertWithNode:(Node *)newNode {
+    
+}
+- (void)insertWithValue:(NSString *)newValue {
+    // insertion in level order
+    // if we find a node whose left child is empty, we make new key as left child of the node. Else if we find a node whose right child is empty, we make new key as right child.
+    if (!self.left) {
+        self.left = [[Node alloc] initWithValue:newValue];
+    }
+}
 
 
 #pragma mark - Delegate Methods
