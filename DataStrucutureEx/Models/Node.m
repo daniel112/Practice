@@ -50,7 +50,7 @@
     return self;
 }
 
-- (instancetype)initWithValue:(NSString *)value {
+- (instancetype)initWithValue:(NSNumber *)value {
     if (self = [super init]) {
         self.value = value;
     }
@@ -70,15 +70,42 @@
 
 
 #pragma mark - Public API
-- (void)insertWithNode:(Node *)newNode {
+// binary search tree
++ (Node *)insertWithNode:(Node *)node value:(NSNumber *)value {
+    
+    if (!node) {
+        return [[Node alloc] initWithValue:value];
+    }
+    
+    if (value.integerValue < node.value.integerValue) {
+        node.left = [self insertWithNode:node.left value:value];
+    } else {
+        node.right = [self insertWithNode:node.right value:value];
+    }
+    
+    return node;
+}
+
+// regular binary tree
++ (Node *)insertLevelOrderWithArray:(NSArray *)array root:(Node *)root index:(NSInteger)index {
+    
+    if (index < array.count) {
+        Node *temp = [[Node alloc] initWithValue:array[index]];
+        root = temp;
+        
+        // insert left child
+        root.left = [self insertLevelOrderWithArray:array root:root.left index:2 * index + 1];
+        
+        // insert right child
+        root.right =  [self insertLevelOrderWithArray:array root:root.right index:2 * index + 2];
+    }
+    return root;
     
 }
-- (void)insertWithValue:(NSString *)newValue {
-    // insertion in level order
-    // if we find a node whose left child is empty, we make new key as left child of the node. Else if we find a node whose right child is empty, we make new key as right child.
-    if (!self.left) {
-        self.left = [[Node alloc] initWithValue:newValue];
-    }
+
+- (void)insertWithValue:(NSNumber *)newValue {
+    // insertion in level order binary search tree
+    [Node insertWithNode:self value:newValue];
 }
 
 

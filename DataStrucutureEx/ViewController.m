@@ -34,12 +34,20 @@
 
 - (void)binaryTree {
     
-    Node *root = [[Node alloc] initWithValue:[self.array firstObject]];
-    NSInteger index = 1;
-    while (index < self.array.count) {
-        [root insertWithValue:self.array[index]];
-        index++;
-    }
+    Node *root = [Node insertLevelOrderWithArray:self.array root:root index:0];
+    
+    
+//    for (NSNumber *item in self.array) {
+//        root = [Node insertWithNode:root value:item];
+//    }
+    
+    //NSInteger index = 1;
+//    while (index < self.array.count) {
+//        [root insertWithValue:self.array[index]];
+//        index++;
+//    }
+    NSLog(@"%@", root);
+    
 }
 
 
