@@ -34,20 +34,21 @@
 
 
 #pragma mark - Initialization
-- (instancetype)initWithValue:(NSString *)value;
+- (instancetype)initWithValue:(NSNumber *)value;
 
 #pragma mark - IBOutlets
 
 
 #pragma mark - Properties
-@property (strong, nonatomic) NSString *value;
+@property (strong, nonatomic) NSNumber *value;
 @property (strong, nonatomic) Node *parent;
 @property (strong, nonatomic) Node *left;
 @property (strong, nonatomic) Node *right;
 
 #pragma mark - Public API
-- (void)insertWithNode:(Node *)newNode;
-- (void)insertWithValue:(NSString *)newValue;
++ (Node *)insertWithNode:(Node *)node value:(NSNumber *)value;
++ (Node *)insertLevelOrderWithArray:(NSArray *)array root:(Node *)root index:(NSInteger)index;
+- (void)insertWithValue:(NSNumber *)newValue;
 
 
 @end
