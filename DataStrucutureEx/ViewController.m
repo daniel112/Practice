@@ -8,10 +8,12 @@
 
 #import "ViewController.h"
 #import "Node.h"
+#import "Person.h"
 
 @interface ViewController ()
 
 @property (strong, nonatomic) NSArray *array;
+@property (strong, nonatomic) NSMutableArray *people;
 
 @end
 
@@ -40,4 +42,17 @@
     }
 }
 
+
+- (void)fbProblem {
+    // given a list of people with their birth and death years, find the year with the highest population
+    NSMutableDictionary *dict = [NSMutableDictionary new];
+    for (Person *person in self.people) {
+        for (NSInteger i = person.birthYear.integerValue; i < person.deathYear.integerValue; i++) {
+            [dict valueForKey:[NSString stringWithFormat:@"%li", (long)i]];
+            [dict setValue:person.birthYear forKey:[NSString stringWithFormat:@"%li", (long)i]];
+        }
+    }
+    
+    
+}
 @end

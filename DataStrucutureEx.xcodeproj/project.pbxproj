@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C037A78218D05F400067EE7 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C037A77218D05F400067EE7 /* Person.m */; };
 		6CA67607218B8559000B8B7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA67606218B8559000B8B7B /* AppDelegate.m */; };
 		6CA6760A218B8559000B8B7B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA67609218B8559000B8B7B /* ViewController.m */; };
 		6CA6760D218B8559000B8B7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CA6760B218B8559000B8B7B /* Main.storyboard */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C037A76218D05F400067EE7 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		6C037A77218D05F400067EE7 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		6CA67602218B8559000B8B7B /* DataStrucutureEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataStrucutureEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CA67605218B8559000B8B7B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6CA67606218B8559000B8B7B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -42,6 +45,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C037A75218D05DF00067EE7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6CA6761B218B9F5D000B8B7B /* Node.h */,
+				6CA6761C218B9F5D000B8B7B /* Node.m */,
+				6C037A76218D05F400067EE7 /* Person.h */,
+				6C037A77218D05F400067EE7 /* Person.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		6CA675F9218B8559000B8B7B = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +75,7 @@
 		6CA67604218B8559000B8B7B /* DataStrucutureEx */ = {
 			isa = PBXGroup;
 			children = (
+				6C037A75218D05DF00067EE7 /* Models */,
 				6CA67605218B8559000B8B7B /* AppDelegate.h */,
 				6CA67606218B8559000B8B7B /* AppDelegate.m */,
 				6CA67608218B8559000B8B7B /* ViewController.h */,
@@ -70,8 +85,6 @@
 				6CA67610218B855B000B8B7B /* LaunchScreen.storyboard */,
 				6CA67613218B855B000B8B7B /* Info.plist */,
 				6CA67614218B855B000B8B7B /* main.m */,
-				6CA6761B218B9F5D000B8B7B /* Node.h */,
-				6CA6761C218B9F5D000B8B7B /* Node.m */,
 			);
 			path = DataStrucutureEx;
 			sourceTree = "<group>";
@@ -148,6 +161,7 @@
 			files = (
 				6CA6760A218B8559000B8B7B /* ViewController.m in Sources */,
 				6CA67615218B855B000B8B7B /* main.m in Sources */,
+				6C037A78218D05F400067EE7 /* Person.m in Sources */,
 				6CA67607218B8559000B8B7B /* AppDelegate.m in Sources */,
 				6CA6761D218B9F5D000B8B7B /* Node.m in Sources */,
 			);
